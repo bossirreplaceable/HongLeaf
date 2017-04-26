@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/main_bg1"
+                tools:context="com.xiao.hongleaf.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/l1"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/circle_danlv"
+        android:gravity="center"
+      >
+
+        <com.xiao.hongleaf.ImageView_Draw
+            android:id="@+id/main_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_above="@+id/l2"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle_danlv"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_rect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:text="矩形的像素点："
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_rect_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_rect"
+                android:text="0"
+                android:textSize="15sp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_leaf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@+id/tv_leaf_value"
+                android:text="矩形的像素点："
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_leaf_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:textSize="15sp"
+                android:text="0"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+
+            >
+
+            <TextView
+                android:id="@+id/t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="叶子的面积："
+                android:textSize="15sp"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/t1"
+                android:text="0"
+                android:textSize="15sp"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/l3"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/main_choose"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/circle_shenlv"
+            android:gravity="center"
+            android:text="照相"/>
+
+        <Button
+            android:id="@+id/main_bjd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/circle_danlv"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="确定标记点"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/l3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/main_sbw"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/circle_danlv"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="确定识别物"/>
+
+        <Button
+            android:id="@+id/main_calculate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/circle_danlv"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="计算叶子面积"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
